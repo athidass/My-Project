@@ -1,0 +1,407 @@
+{
+	"info": {
+		"_postman_id": "1c930e9e-39e9-4713-b97e-bad9ce53b28f",
+		"name": "FaceRecognition_Batch3",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "PersonGroup Create_PUT",
+			"protocolProfileBehavior": {
+				"disabledSystemHeaders": {}
+			},
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Ocp-Apim-Subscription-Key",
+						"value": "5a1a100b4d5c4182aedda060d5572ba6",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"Students MIB AI Batch 3\",\r\n    \"userData\": \"This PersonGroup is store Students in our MIB AI Batch 3 Online\"\r\n}"
+				},
+				"url": {
+					"raw": "https://southeastasia.api.cognitive.microsoft.com/face/v1.0/persongroups/1",
+					"protocol": "https",
+					"host": [
+						"southeastasia",
+						"api",
+						"cognitive",
+						"microsoft",
+						"com"
+					],
+					"path": [
+						"face",
+						"v1.0",
+						"persongroups",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "PersonGroup Retrieve_GET",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Ocp-Apim-Subscription-Key",
+						"value": "5a1a100b4d5c4182aedda060d5572ba6",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "https://southeastasia.api.cognitive.microsoft.com/face/v1.0/persongroups",
+					"protocol": "https",
+					"host": [
+						"southeastasia",
+						"api",
+						"cognitive",
+						"microsoft",
+						"com"
+					],
+					"path": [
+						"face",
+						"v1.0",
+						"persongroups"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "PersonGroup Person CREATE",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Ocp-Apim-Subscription-Key",
+						"value": "5a1a100b4d5c4182aedda060d5572ba6",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"Mr. Kyaw Kyaw\",\r\n    \"userData\": \"Student Kyaw Kyaw\"\r\n}"
+				},
+				"url": {
+					"raw": "https://southeastasia.api.cognitive.microsoft.com/face/v1.0/persongroups/1/persons",
+					"protocol": "https",
+					"host": [
+						"southeastasia",
+						"api",
+						"cognitive",
+						"microsoft",
+						"com"
+					],
+					"path": [
+						"face",
+						"v1.0",
+						"persongroups",
+						"1",
+						"persons"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "PersonGroup Person GET",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Ocp-Apim-Subscription-Key",
+						"value": "5a1a100b4d5c4182aedda060d5572ba6",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "https://southeastasia.api.cognitive.microsoft.com/face/v1.0/persongroups/1/persons/",
+					"protocol": "https",
+					"host": [
+						"southeastasia",
+						"api",
+						"cognitive",
+						"microsoft",
+						"com"
+					],
+					"path": [
+						"face",
+						"v1.0",
+						"persongroups",
+						"1",
+						"persons",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "PersonGroup Person Face Add",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Ocp-Apim-Subscription-Key",
+						"value": "5a1a100b4d5c4182aedda060d5572ba6",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"url\": \"https://e0.365dm.com/21/08/768x432/skysports-lionel-messi-barcelona_5472325.jpg?20210808171958\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://southeastasia.api.cognitive.microsoft.com/face/v1.0/persongroups/1/persons/d653d5ec-81b6-4e12-b08b-a22dc4c641b1/persistedFaces",
+					"protocol": "https",
+					"host": [
+						"southeastasia",
+						"api",
+						"cognitive",
+						"microsoft",
+						"com"
+					],
+					"path": [
+						"face",
+						"v1.0",
+						"persongroups",
+						"1",
+						"persons",
+						"d653d5ec-81b6-4e12-b08b-a22dc4c641b1",
+						"persistedFaces"
+					],
+					"query": [
+						{
+							"key": "personId",
+							"value": null,
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "PersonGroup Person GET Face",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Ocp-Apim-Subscription-Key",
+						"value": "5a1a100b4d5c4182aedda060d5572ba6",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "https://southeastasia.api.cognitive.microsoft.com/face/v1.0/persongroups/1/persons/d653d5ec-81b6-4e12-b08b-a22dc4c641b1",
+					"protocol": "https",
+					"host": [
+						"southeastasia",
+						"api",
+						"cognitive",
+						"microsoft",
+						"com"
+					],
+					"path": [
+						"face",
+						"v1.0",
+						"persongroups",
+						"1",
+						"persons",
+						"d653d5ec-81b6-4e12-b08b-a22dc4c641b1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "PersonGroup TRAIN",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Ocp-Apim-Subscription-Key",
+						"value": "5a1a100b4d5c4182aedda060d5572ba6",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "https://southeastasia.api.cognitive.microsoft.com/face/v1.0/persongroups/1/train",
+					"protocol": "https",
+					"host": [
+						"southeastasia",
+						"api",
+						"cognitive",
+						"microsoft",
+						"com"
+					],
+					"path": [
+						"face",
+						"v1.0",
+						"persongroups",
+						"1",
+						"train"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "PersonGroup GET TRAIN STATUS",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Ocp-Apim-Subscription-Key",
+						"value": "5a1a100b4d5c4182aedda060d5572ba6",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "https://southeastasia.api.cognitive.microsoft.com/face/v1.0/persongroups/1/training",
+					"protocol": "https",
+					"host": [
+						"southeastasia",
+						"api",
+						"cognitive",
+						"microsoft",
+						"com"
+					],
+					"path": [
+						"face",
+						"v1.0",
+						"persongroups",
+						"1",
+						"training"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "New FACE DETECTION",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Ocp-Apim-Subscription-Key",
+						"value": "5a1a100b4d5c4182aedda060d5572ba6",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"url\": \"https://www.biography.com/.image/t_share/MTQ4MDU5NDU0MzgwNzEzNDk0/lionel_messi_photo_josep_lago_afp_getty_images_664928892_resizedjpg.jpg\"\r\n}"
+				},
+				"url": {
+					"raw": "https://southeastasia.api.cognitive.microsoft.com/face/v1.0/detect?returnFaceId=true",
+					"protocol": "https",
+					"host": [
+						"southeastasia",
+						"api",
+						"cognitive",
+						"microsoft",
+						"com"
+					],
+					"path": [
+						"face",
+						"v1.0",
+						"detect"
+					],
+					"query": [
+						{
+							"key": "returnFaceId",
+							"value": "true"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Face Identify",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Ocp-Apim-Subscription-Key",
+						"value": "5a1a100b4d5c4182aedda060d5572ba6",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"personGroupId\": \"1\",\r\n    \"faceIds\": [\r\n        \"95b1107c-ff62-42f9-b890-32f6126b0ec2\"\r\n    ],\r\n    \"maxNumOfCandidatesReturned\": 1,\r\n    \"confidenceThreshold\": 0.5\r\n}"
+				},
+				"url": {
+					"raw": "https://southeastasia.api.cognitive.microsoft.com/face/v1.0/identify",
+					"protocol": "https",
+					"host": [
+						"southeastasia",
+						"api",
+						"cognitive",
+						"microsoft",
+						"com"
+					],
+					"path": [
+						"face",
+						"v1.0",
+						"identify"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
